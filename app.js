@@ -5,8 +5,11 @@
 //   return choices[choice];
 // };
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
-  const choice = Math.floor(Math.random() * 3);
+  let choice = Math.floor(Math.random() * 3);
 
   if (choice == 0) {
     return "rock";
@@ -17,6 +20,11 @@ function getComputerChoice() {
   }
 }
 
-let choice = getComputerChoice();
-
+function getHumanChoice() {
+  let choice = prompt("Rock, paper, scissors?");
+  if (choice !== null) {
+    return choice;
+  }
+}
+let choice = getHumanChoice();
 console.log(choice);
